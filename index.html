@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lumélia — Culotte gainante post-partum</title>
+  <meta name="description" content="Culotte gainante post-partum taille haute à bandes croisées. Maintient et lisse le ventre, invisible sous les vêtements." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== Bandeau défilant ===== -->
+  <div class="marquee" aria-label="Avantages">
+    <div class="marquee__track">
+      <span>✦ Livraison offerte en France dès 50 € d'achat</span>
+      <span>✦ Satisfaite ou remboursée 30 jours</span>
+      <span class="hl">● Offre : 1 culotte achetée = 1 offerte</span>
+      <span>✦ Paiement 100 % sécurisé</span>
+      <span>✦ Livraison offerte en France dès 50 € d'achat</span>
+      <span>✦ Satisfaite ou remboursée 30 jours</span>
+      <span class="hl">● Offre : 1 culotte achetée = 1 offerte</span>
+      <span>✦ Paiement 100 % sécurisé</span>
+    </div>
+  </div>
+
+  <!-- ===== En-tête ===== -->
+  <header class="header" id="header">
+    <div class="header__top container">
+      <button class="icon-btn burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+      <a href="#" class="logo">lum<span>é</span>lia</a>
+      <div class="header__icons">
+        <button class="icon-btn" aria-label="Rechercher">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        </button>
+        <button class="icon-btn hide-sm" aria-label="Mon compte">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+        </button>
+        <button class="icon-btn cart-btn" id="cartOpen" aria-label="Panier">
+          <svg viewBox="0 0 24 24"><path d="M5 8h14l-1 13H6L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+    <nav class="nav" id="nav">
+      <a href="#">Accueil</a>
+      <a href="#produit" class="active">Nos produits</a>
+      <a href="#" data-open="sizeModal">Guide des tailles</a>
+      <a href="#avis">Avis clientes</a>
+      <a href="#histoire">Notre histoire</a>
+      <a href="#faq">Suivre ma commande</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== Fiche produit ===== -->
+    <section class="product container" id="produit">
+      <div class="gallery reveal">
+        <div class="gallery__main" id="mainWrap">
+          <img id="mainImg" src="images/produit-beige.svg" alt="Culotte gainante post-partum coloris beige" />
+          <div class="gallery__overlay">
+            <small>Nouvelle silhouette</small>
+            <h3>Fini les<br />complexes.</h3>
+            <i>Pas besoin<br />de chirurgie.</i>
+          </div>
+          <button class="gallery__arrow prev" id="prevImg" aria-label="Image précédente">‹</button>
+          <button class="gallery__arrow next" id="nextImg" aria-label="Image suivante">›</button>
+        </div>
+        <div class="gallery__thumbs" id="thumbs"></div>
+      </div>
+
+      <div class="info">
+        <span class="pill reveal">Pensée pour les mamans, à chaque étape</span>
+        <p class="eyebrow reveal">Taille haute · Bandes croisées</p>
+        <h1 class="title reveal">Culotte gainante<br />post-partum</h1>
+
+        <ul class="pains reveal">
+          <li>Le jean qui marque le ventre et le bourrelet au-dessus de la ceinture</li>
+          <li>Les robes ajustées qui restent au placard</li>
+          <li>Les photos où vous rentrez le ventre, et le grand pull pour le cacher</li>
+        </ul>
+        <p class="lead reveal">Lumélia maintient et lisse votre ventre dès que vous l'enfilez. Elle ne se voit pas sous vos vêtements, et vous retrouvez l'envie de vous habiller.</p>
+
+        <p class="price reveal"><strong id="unitPrice">33,90 €</strong> la culotte · la 2<sup>e</sup> offerte</p>
+
+        <!-- Compte à rebours : réglez la date de fin réelle dans js/main.js (OFFER_END) -->
+        <div class="countdown reveal" id="countdown">
+          <p class="countdown__label"><span class="dot"></span> Offre à 33,90 € · se termine dans</p>
+          <div class="countdown__boxes">
+            <div><b id="cdD">00</b><small>Jours</small></div><em>:</em>
+            <div><b id="cdH">00</b><small>Heures</small></div><em>:</em>
+            <div><b id="cdM">00</b><small>Min</small></div><em>:</em>
+            <div><b id="cdS">00</b><small>Sec</small></div>
+          </div>
+        </div>
+
+        <!-- Couleurs -->
+        <div class="option reveal">
+          <p class="option__label">Couleur : <b id="colorName">Beige</b></p>
+          <div class="swatches" id="swatches">
+            <button class="swatch active" style="--c:#d8b79c" data-color="Beige" data-img="images/produit-beige.svg" aria-label="Beige"></button>
+            <button class="swatch" style="--c:#3a2a25" data-color="Noir" data-img="images/produit-noir.svg" aria-label="Noir"></button>
+            <button class="swatch" style="--c:#3f5bb0" data-color="Bleu" data-img="images/produit-bleu.svg" aria-label="Bleu"></button>
+            <button class="swatch" style="--c:#b9a0d0" data-color="Lilas" data-img="images/produit-lilas.svg" aria-label="Lilas"></button>
+          </div>
+        </div>
+
+        <!-- Tailles -->
+        <div class="option reveal">
+          <p class="option__label">Taille : <b id="sizeName">M</b> <a href="#" class="link" data-open="sizeModal">Guide des tailles</a></p>
+          <div class="sizes" id="sizes">
+            <button>S</button><button class="active">M</button><button>L</button><button>XL</button><button>XXL</button><button>XXXL</button>
+          </div>
+        </div>
+
+        <!-- Packs -->
+        <div class="bundles reveal" id="bundles">
+          <label class="bundle">
+            <input type="radio" name="bundle" value="1" />
+            <span class="radio"></span>
+            <span class="bundle__name">1 achetée + 1 offerte</span>
+            <span class="bundle__prices"><s>67,80 €</s><em>−50 %</em><b>33,90 €</b></span>
+          </label>
+          <label class="bundle bundle--popular">
+            <span class="tag tag--right">🚚 Livraison offerte</span>
+            <span class="tag tag--left">Le plus choisi</span>
+            <input type="radio" name="bundle" value="2" checked />
+            <span class="radio"></span>
+            <span class="bundle__name">2 achetées + 2 offertes</span>
+            <span class="bundle__prices"><s>135,60 €</s><em>−50 %</em><b>67,80 €</b></span>
+          </label>
+          <label class="bundle">
+            <span class="tag tag--right">🚚 Livraison offerte</span>
+            <span class="tag tag--left tag--dark">Une pour chaque jour</span>
+            <input type="radio" name="bundle" value="3" />
+            <span class="radio"></span>
+            <span class="bundle__name">3 achetées + 3 offertes</span>
+            <span class="bundle__prices"><s>203,40 €</s><em>−50 %</em><b>101,70 €</b></span>
+          </label>
+        </div>
+
+        <button class="btn btn--primary btn--full reveal" id="addToCart">
+          <span>Ajouter au panier — <b id="ctaPrice">67,80 €</b></span>
+        </button>
+
+        <ul class="trust reveal">
+          <li><svg viewBox="0 0 24 24"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>Livraison suivie</li>
+          <li><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 3-6.3"/><path d="M4 4v4h4"/></svg>30 jours pour changer d'avis</li>
+          <li><svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Paiement sécurisé</li>
+        </ul>
+
+        <div class="accordion reveal">
+          <details open>
+            <summary>Description</summary>
+            <p>Taille haute, bandes de maintien croisées sur le ventre, tissu respirant et doux. Coutures plates invisibles sous les vêtements. À porter au quotidien, dès que vous vous sentez prête.</p>
+          </details>
+          <details>
+            <summary>Composition & entretien</summary>
+            <p>Indiquez ici la composition exacte fournie par votre fournisseur (ex. polyamide / élasthanne). Lavage à 30 °C, pas de sèche-linge.</p>
+          </details>
+          <details>
+            <summary>Livraison & retours</summary>
+            <p>Indiquez ici vos délais réels de livraison. Retours acceptés sous 30 jours, article non porté.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Chiffres clés ===== -->
+    <section class="stats">
+      <div class="container stats__grid">
+        <div class="reveal"><b data-count="5" data-decimals="1" id="statScore">0</b><span>/5 note moyenne</span></div>
+        <div class="reveal"><b data-count="30" data-suffix=" j">0</b><span>satisfaite ou remboursée</span></div>
+        <div class="reveal"><b data-count="6" data-suffix=" tailles">0</b><span>du S au XXXL</span></div>
+        <div class="reveal"><b data-count="4" data-suffix=" coloris">0</b><span>beige, noir, bleu, lilas</span></div>
+      </div>
+    </section>
+
+    <!-- ===== Avant / Après ===== -->
+    <section class="difference" id="histoire">
+      <div class="container">
+        <p class="eyebrow center reveal">La différence</p>
+        <h2 class="h2 center reveal">Le même corps, la même<br />tenue. Avec Lumélia dessous.</h2>
+        <div class="tabs reveal" role="tablist">
+          <button class="active" data-tab="lingerie">En lingerie</button>
+          <button data-tab="robe">Sous une robe</button>
+          <span class="tabs__pill"></span>
+        </div>
+        <div class="compare reveal" id="compare">
+          <img src="images/avant.svg" alt="Avant" class="compare__img" />
+          <div class="compare__after" id="compareAfter">
+            <img src="images/apres.svg" alt="Après" class="compare__img" />
+          </div>
+          <span class="compare__label left">Sans</span>
+          <span class="compare__label right">Avec</span>
+          <div class="compare__handle" id="compareHandle"><span>‹ ›</span></div>
+        </div>
+        <p class="hint center">Faites glisser pour comparer</p>
+      </div>
+    </section>
+
+    <!-- ===== Avantages ===== -->
+    <section class="features container">
+      <article class="feature reveal">
+        <div class="feature__icon">✦</div>
+        <h3>Bandes croisées</h3>
+        <p>Un maintien ciblé sur le ventre, sans comprimer la respiration.</p>
+      </article>
+      <article class="feature reveal">
+        <div class="feature__icon">◌</div>
+        <h3>Invisible</h3>
+        <p>Coutures plates, aucune marque sous un jean ou une robe ajustée.</p>
+      </article>
+      <article class="feature reveal">
+        <div class="feature__icon">❀</div>
+        <h3>Douce & respirante</h3>
+        <p>Un tissu agréable à porter toute la journée.</p>
+      </article>
+      <article class="feature reveal">
+        <div class="feature__icon">↑</div>
+        <h3>Taille haute</h3>
+        <p>Elle reste en place, ne roule pas et ne glisse pas.</p>
+      </article>
+    </section>
+
+    <!-- ===== Avis ===== -->
+    <section class="reviews" id="avis">
+      <div class="container">
+        <p class="eyebrow center line reveal">Avis sur ce modèle</p>
+        <h2 class="h2 center reveal">Ce qu'en pensent<br />celles qui l'ont portée</h2>
+        <div class="score reveal">
+          <span class="score__big"><b id="avgScore">4,7</b><small>/5</small></span>
+          <span class="score__side"><span class="stars">★★★★★</span><small>Note moyenne du modèle</small></span>
+        </div>
+        <p class="note center reveal">Remplacez les exemples ci-dessous par vos vrais avis clients (fichier js/main.js).</p>
+
+        <div class="quote reveal">
+          <div class="quote__inner" id="quote">
+            <div class="quote__mark">“</div>
+            <blockquote id="quoteText"></blockquote>
+            <p class="quote__meta" id="quoteMeta"></p>
+            <div class="quote__dots" id="quoteDots"></div>
+          </div>
+        </div>
+
+        <div class="review-grid" id="reviewGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="faq container" id="faq">
+      <p class="eyebrow center reveal">Questions fréquentes</p>
+      <h2 class="h2 center reveal">On vous répond</h2>
+      <div class="accordion accordion--big reveal">
+        <details><summary>Quand puis-je la porter après l'accouchement ?</summary><p>Demandez l'avis de votre sage-femme ou de votre médecin, en particulier après une césarienne. Une fois leur accord obtenu, vous pouvez la porter au quotidien.</p></details>
+        <details><summary>Comment choisir ma taille ?</summary><p>Mesurez votre tour de taille et de hanches et reportez-vous à notre guide des tailles. Entre deux tailles, prenez la plus grande.</p></details>
+        <details><summary>Est-ce qu'elle se voit sous les vêtements ?</summary><p>Non : les coutures sont plates et le tissu fin, elle reste invisible sous un jean ou une robe.</p></details>
+        <details><summary>Comment suivre ma commande ?</summary><p>Vous recevez un e-mail avec votre numéro de suivi dès l'expédition.</p></details>
+      </div>
+    </section>
+
+    <!-- ===== Newsletter ===== -->
+    <section class="newsletter" id="contact">
+      <div class="container newsletter__inner reveal">
+        <h2 class="h2">Rejoignez le cercle Lumélia</h2>
+        <p>Conseils post-partum, nouveautés et offres en avant-première.</p>
+        <form class="newsletter__form" id="newsForm">
+          <input type="email" placeholder="Votre adresse e-mail" required />
+          <button class="btn btn--light">Je m'inscris</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <a href="#" class="logo logo--light">lum<span>é</span>lia</a>
+        <p>Pensée pour les mamans, à chaque étape.</p>
+      </div>
+      <div><h4>Boutique</h4><a href="#produit">Nos produits</a><a href="#" data-open="sizeModal">Guide des tailles</a><a href="#avis">Avis clientes</a></div>
+      <div><h4>Aide</h4><a href="#faq">FAQ</a><a href="#faq">Suivre ma commande</a><a href="#contact">Contact</a></div>
+      <div><h4>Légal</h4><a href="#">Mentions légales</a><a href="#">CGV</a><a href="#">Politique de retour</a><a href="#">Confidentialité</a></div>
+    </div>
+    <p class="footer__copy">© <span id="year"></span> Lumélia. Tous droits réservés.</p>
+  </footer>
+
+  <!-- ===== Barre d'achat collante ===== -->
+  <div class="sticky-bar" id="stickyBar">
+    <div class="sticky-bar__info">
+      <img src="images/produit-beige.svg" alt="" id="stickyImg" />
+      <div><b>Culotte gainante post-partum</b><small id="stickyDesc">2 achetées + 2 offertes</small></div>
+    </div>
+    <button class="btn btn--primary" id="stickyAdd">Ajouter — <b id="stickyPrice">67,80 €</b></button>
+  </div>
+
+  <!-- ===== Panier ===== -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="drawer" id="drawer" aria-label="Panier">
+    <div class="drawer__head">
+      <h3>Votre panier</h3>
+      <button class="icon-btn" id="cartClose" aria-label="Fermer">✕</button>
+    </div>
+    <div class="drawer__ship">
+      <p id="shipText">Plus que 50,00 € pour la livraison offerte</p>
+      <div class="bar"><span id="shipBar"></span></div>
+    </div>
+    <div class="drawer__items" id="cartItems"></div>
+    <div class="drawer__foot">
+      <p class="drawer__total">Total <b id="cartTotal">0,00 €</b></p>
+      <button class="btn btn--primary btn--full" id="checkout">Commander</button>
+      <small>Paiement sécurisé · Satisfaite ou remboursée 30 jours</small>
+    </div>
+  </aside>
+
+  <!-- ===== Guide des tailles ===== -->
+  <div class="modal" id="sizeModal" aria-hidden="true">
+    <div class="modal__box">
+      <button class="icon-btn modal__close" data-close aria-label="Fermer">✕</button>
+      <h3 class="h3">Guide des tailles</h3>
+      <p class="note">Valeurs indicatives : remplacez-les par le tableau de votre fournisseur.</p>
+      <table>
+        <thead><tr><th>Taille</th><th>Tour de taille</th><th>Tour de hanches</th></tr></thead>
+        <tbody>
+          <tr><td>S</td><td>60–68 cm</td><td>86–94 cm</td></tr>
+          <tr><td>M</td><td>68–76 cm</td><td>94–102 cm</td></tr>
+          <tr><td>L</td><td>76–84 cm</td><td>102–110 cm</td></tr>
+          <tr><td>XL</td><td>84–92 cm</td><td>110–118 cm</td></tr>
+          <tr><td>XXL</td><td>92–100 cm</td><td>118–126 cm</td></tr>
+          <tr><td>XXXL</td><td>100–110 cm</td><td>126–134 cm</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

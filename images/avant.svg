@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 650">
+<rect width="500" height="650" fill="#e9e3da"/>
+<circle cx="250" cy="120" r="55" fill="#c99a7c"/><path d="M190 90 Q250 20 310 90 Q330 140 300 170 L200 170 Q170 140 190 90" fill="#2c1e1a"/>
+<path d="M185 190 Q250 175 315 190 L320 330 L180 330 Z" fill="#fbfaf8"/>
+<path d="M180 330 L320 330 Q390 400 315 470 L185 470 Q175 400 180 330" fill="#c99a7c"/>
+<path d="M185 420 L315 420 Q357.0 500 300 560 L200 560 Q180 500 185 420" fill="#dcbba2"/>
+<text x="250" y="625" text-anchor="middle" font-family="Georgia,serif" font-size="18" fill="#7a5a4c" opacity=".7">Avant · remplacez par votre photo</text>
+</svg>
